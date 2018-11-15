@@ -1,0 +1,13 @@
+C:\Users\Notebook\Documents\OS_CursProject\OS_CursProject\bin\Debug\OS_CursProject.exe.config
+C:\Users\Notebook\Documents\OS_CursProject\OS_CursProject\bin\Debug\OS_CursProject.exe
+C:\Users\Notebook\Documents\OS_CursProject\OS_CursProject\bin\Debug\OS_CursProject.pdb
+C:\Users\Notebook\Documents\OS_CursProject\OS_CursProject\obj\Debug\OS_CursProject.csprojAssemblyReference.cache
+C:\Users\Notebook\Documents\OS_CursProject\OS_CursProject\obj\Debug\OS_CursProject.MainWindow.resources
+C:\Users\Notebook\Documents\OS_CursProject\OS_CursProject\obj\Debug\OS_CursProject.Properties.Resources.resources
+C:\Users\Notebook\Documents\OS_CursProject\OS_CursProject\obj\Debug\OS_CursProject.csproj.GenerateResource.cache
+C:\Users\Notebook\Documents\OS_CursProject\OS_CursProject\obj\Debug\OS_CursProject.csproj.CoreCompileInputs.cache
+C:\Users\Notebook\Documents\OS_CursProject\OS_CursProject\obj\Debug\OS_CursProject.exe
+C:\Users\Notebook\Documents\OS_CursProject\OS_CursProject\obj\Debug\OS_CursProject.pdb
+C:\Users\Notebook\Documents\OS_CursProject\OS_CursProject\bin\Debug\HardWareInfo.dll
+C:\Users\Notebook\Documents\OS_CursProject\OS_CursProject\bin\Debug\HardWareInfo.pdb
+C:\Users\Notebook\Documents\OS_CursProject\OS_CursProject\obj\Debug\OS_CursProject.csproj.CopyComplete
