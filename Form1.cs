@@ -20,7 +20,9 @@ namespace OS_CursProject
         private void Form1_Load(object sender, EventArgs e)
         {
             DiskDriveInfo Test = new DiskDriveInfo();
+            ProcessorInfo Test2 = new ProcessorInfo();
             Test.GetInfo();
+            Test2.GetInfo();
         }
     }
 }
