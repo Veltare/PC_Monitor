@@ -11,3 +11,6 @@ C:\Users\Notebook\Documents\PC_Monitor\OS_CursProject\obj\Debug\PC_Monitor.cspro
 C:\Users\Notebook\Documents\PC_Monitor\OS_CursProject\obj\Debug\PC_Monitor.csproj.CopyComplete
 C:\Users\Notebook\Documents\PC_Monitor\OS_CursProject\obj\Debug\OS_CursProject.exe
 C:\Users\Notebook\Documents\PC_Monitor\OS_CursProject\obj\Debug\OS_CursProject.pdb
+C:\Users\Notebook\Documents\PC_Monitor\OS_CursProject\bin\Debug\MetroFramework.Design.dll
+C:\Users\Notebook\Documents\PC_Monitor\OS_CursProject\bin\Debug\MetroFramework.dll
+C:\Users\Notebook\Documents\PC_Monitor\OS_CursProject\bin\Debug\MetroFramework.Fonts.dll
