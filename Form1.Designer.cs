@@ -40,29 +40,29 @@ namespace OS_CursProject
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.CPUusage = new System.Windows.Forms.TabPage();
-            this.CPULabel = new MetroFramework.Controls.MetroLabel();
             this.chartCPU = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.HDDusage = new System.Windows.Forms.TabPage();
-            this.UIStyle = new MetroFramework.Components.MetroStyleManager(this.components);
-            this.cpu1 = new MetroFramework.Controls.MetroLabel();
-            this.cpu2 = new MetroFramework.Controls.MetroLabel();
+            this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
+            this.value6 = new MetroFramework.Controls.MetroLabel();
+            this.value5 = new MetroFramework.Controls.MetroLabel();
+            this.value4 = new MetroFramework.Controls.MetroLabel();
+            this.value3 = new MetroFramework.Controls.MetroLabel();
+            this.value2 = new MetroFramework.Controls.MetroLabel();
+            this.value1 = new MetroFramework.Controls.MetroLabel();
+            this.cpu5 = new MetroFramework.Controls.MetroLabel();
             this.cpu3 = new MetroFramework.Controls.MetroLabel();
             this.cpu4 = new MetroFramework.Controls.MetroLabel();
-            this.cpu5 = new MetroFramework.Controls.MetroLabel();
             this.cpu6 = new MetroFramework.Controls.MetroLabel();
-            this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
-            this.value1 = new MetroFramework.Controls.MetroLabel();
-            this.value2 = new MetroFramework.Controls.MetroLabel();
-            this.value3 = new MetroFramework.Controls.MetroLabel();
-            this.value4 = new MetroFramework.Controls.MetroLabel();
-            this.value5 = new MetroFramework.Controls.MetroLabel();
-            this.value6 = new MetroFramework.Controls.MetroLabel();
+            this.cpu2 = new MetroFramework.Controls.MetroLabel();
+            this.CPULabel = new MetroFramework.Controls.MetroLabel();
+            this.cpu1 = new MetroFramework.Controls.MetroLabel();
+            this.HDDusage = new System.Windows.Forms.TabPage();
+            this.UIStyle = new MetroFramework.Components.MetroStyleManager(this.components);
             this.metroPanel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.CPUusage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartCPU)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.UIStyle)).BeginInit();
             this.metroPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.UIStyle)).BeginInit();
             this.SuspendLayout();
             // 
             // metroPanel1
@@ -101,16 +101,6 @@ namespace OS_CursProject
             this.CPUusage.Text = "Мониторинг ЦП";
             this.CPUusage.UseVisualStyleBackColor = true;
             // 
-            // CPULabel
-            // 
-            this.CPULabel.FontSize = MetroFramework.MetroLabelSize.Small;
-            this.CPULabel.Location = new System.Drawing.Point(119, 2);
-            this.CPULabel.Name = "CPULabel";
-            this.CPULabel.Size = new System.Drawing.Size(339, 43);
-            this.CPULabel.TabIndex = 1;
-            this.CPULabel.Text = "Характеристики CPU";
-            this.CPULabel.Click += new System.EventHandler(this.metroLabel1_Click);
-            // 
             // chartCPU
             // 
             this.chartCPU.BackColor = System.Drawing.Color.GhostWhite;
@@ -125,7 +115,7 @@ namespace OS_CursProject
             chartArea1.AxisX.Interval = 2D;
             chartArea1.AxisX.IntervalAutoMode = System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode.VariableCount;
             chartArea1.AxisX.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
-            chartArea1.AxisX.Maximum = 100D;
+            chartArea1.AxisX.Maximum = 60D;
             chartArea1.AxisX.Minimum = 0D;
             chartArea1.AxisY.Interval = 10D;
             chartArea1.AxisY.Maximum = 100D;
@@ -148,6 +138,7 @@ namespace OS_CursProject
             series1.Legend = "Legend1";
             series1.MarkerBorderColor = System.Drawing.Color.White;
             series1.Name = "CPU Usage";
+            series1.YValuesPerPoint = 2;
             this.chartCPU.Series.Add(series1);
             this.chartCPU.Size = new System.Drawing.Size(906, 281);
             this.chartCPU.TabIndex = 0;
@@ -180,84 +171,6 @@ namespace OS_CursProject
             this.chartCPU.Titles.Add(title2);
             this.chartCPU.Titles.Add(title3);
             // 
-            // HDDusage
-            // 
-            this.HDDusage.Location = new System.Drawing.Point(4, 29);
-            this.HDDusage.Name = "HDDusage";
-            this.HDDusage.Padding = new System.Windows.Forms.Padding(3);
-            this.HDDusage.Size = new System.Drawing.Size(915, 559);
-            this.HDDusage.TabIndex = 1;
-            this.HDDusage.Text = "Мониторинг HDD";
-            this.HDDusage.UseVisualStyleBackColor = true;
-            // 
-            // UIStyle
-            // 
-            this.UIStyle.Owner = this;
-            this.UIStyle.Style = MetroFramework.MetroColorStyle.Orange;
-            // 
-            // cpu1
-            // 
-            this.cpu1.FontSize = MetroFramework.MetroLabelSize.Small;
-            this.cpu1.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.cpu1.ForeColor = System.Drawing.Color.Black;
-            this.cpu1.Location = new System.Drawing.Point(10, 45);
-            this.cpu1.Name = "cpu1";
-            this.cpu1.Size = new System.Drawing.Size(189, 32);
-            this.cpu1.TabIndex = 3;
-            this.cpu1.Text = "Имя CPU: ";
-            // 
-            // cpu2
-            // 
-            this.cpu2.FontSize = MetroFramework.MetroLabelSize.Small;
-            this.cpu2.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.cpu2.Location = new System.Drawing.Point(10, 79);
-            this.cpu2.Name = "cpu2";
-            this.cpu2.Size = new System.Drawing.Size(136, 31);
-            this.cpu2.TabIndex = 4;
-            this.cpu2.Text = "Архитектура:";
-            this.cpu2.Click += new System.EventHandler(this.cpu2_Click);
-            // 
-            // cpu3
-            // 
-            this.cpu3.FontSize = MetroFramework.MetroLabelSize.Small;
-            this.cpu3.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.cpu3.Location = new System.Drawing.Point(10, 112);
-            this.cpu3.Name = "cpu3";
-            this.cpu3.Size = new System.Drawing.Size(136, 27);
-            this.cpu3.TabIndex = 5;
-            this.cpu3.Text = "Подпись:";
-            this.cpu3.Click += new System.EventHandler(this.cpu3_Click);
-            // 
-            // cpu4
-            // 
-            this.cpu4.FontSize = MetroFramework.MetroLabelSize.Small;
-            this.cpu4.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.cpu4.Location = new System.Drawing.Point(10, 141);
-            this.cpu4.Name = "cpu4";
-            this.cpu4.Size = new System.Drawing.Size(178, 20);
-            this.cpu4.TabIndex = 6;
-            this.cpu4.Text = "Базовая частота: ";
-            // 
-            // cpu5
-            // 
-            this.cpu5.FontSize = MetroFramework.MetroLabelSize.Small;
-            this.cpu5.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.cpu5.Location = new System.Drawing.Point(10, 163);
-            this.cpu5.Name = "cpu5";
-            this.cpu5.Size = new System.Drawing.Size(151, 33);
-            this.cpu5.TabIndex = 7;
-            this.cpu5.Text = "Ядра: ";
-            // 
-            // cpu6
-            // 
-            this.cpu6.FontSize = MetroFramework.MetroLabelSize.Small;
-            this.cpu6.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.cpu6.Location = new System.Drawing.Point(10, 198);
-            this.cpu6.Name = "cpu6";
-            this.cpu6.Size = new System.Drawing.Size(169, 33);
-            this.cpu6.TabIndex = 8;
-            this.cpu6.Text = "Потоки: ";
-            // 
             // metroPanel2
             // 
             this.metroPanel2.Controls.Add(this.value6);
@@ -284,45 +197,15 @@ namespace OS_CursProject
             this.metroPanel2.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel2.VerticalScrollbarSize = 10;
             // 
-            // value1
+            // value6
             // 
-            this.value1.AutoSize = true;
-            this.value1.FontSize = MetroFramework.MetroLabelSize.Small;
-            this.value1.Location = new System.Drawing.Point(275, 43);
-            this.value1.Name = "value1";
-            this.value1.Size = new System.Drawing.Size(68, 15);
-            this.value1.TabIndex = 9;
-            this.value1.Text = "metroLabel1";
-            // 
-            // value2
-            // 
-            this.value2.AutoSize = true;
-            this.value2.FontSize = MetroFramework.MetroLabelSize.Small;
-            this.value2.Location = new System.Drawing.Point(274, 74);
-            this.value2.Name = "value2";
-            this.value2.Size = new System.Drawing.Size(70, 15);
-            this.value2.TabIndex = 10;
-            this.value2.Text = "metroLabel2";
-            // 
-            // value3
-            // 
-            this.value3.AutoSize = true;
-            this.value3.FontSize = MetroFramework.MetroLabelSize.Small;
-            this.value3.Location = new System.Drawing.Point(274, 105);
-            this.value3.Name = "value3";
-            this.value3.Size = new System.Drawing.Size(70, 15);
-            this.value3.TabIndex = 11;
-            this.value3.Text = "metroLabel3";
-            // 
-            // value4
-            // 
-            this.value4.AutoSize = true;
-            this.value4.FontSize = MetroFramework.MetroLabelSize.Small;
-            this.value4.Location = new System.Drawing.Point(274, 136);
-            this.value4.Name = "value4";
-            this.value4.Size = new System.Drawing.Size(70, 15);
-            this.value4.TabIndex = 12;
-            this.value4.Text = "metroLabel4";
+            this.value6.AutoSize = true;
+            this.value6.FontSize = MetroFramework.MetroLabelSize.Small;
+            this.value6.Location = new System.Drawing.Point(274, 198);
+            this.value6.Name = "value6";
+            this.value6.Size = new System.Drawing.Size(70, 15);
+            this.value6.TabIndex = 14;
+            this.value6.Text = "metroLabel6";
             // 
             // value5
             // 
@@ -334,15 +217,133 @@ namespace OS_CursProject
             this.value5.TabIndex = 13;
             this.value5.Text = "metroLabel5";
             // 
-            // value6
+            // value4
             // 
-            this.value6.AutoSize = true;
-            this.value6.FontSize = MetroFramework.MetroLabelSize.Small;
-            this.value6.Location = new System.Drawing.Point(274, 198);
-            this.value6.Name = "value6";
-            this.value6.Size = new System.Drawing.Size(70, 15);
-            this.value6.TabIndex = 14;
-            this.value6.Text = "metroLabel6";
+            this.value4.AutoSize = true;
+            this.value4.FontSize = MetroFramework.MetroLabelSize.Small;
+            this.value4.Location = new System.Drawing.Point(274, 136);
+            this.value4.Name = "value4";
+            this.value4.Size = new System.Drawing.Size(70, 15);
+            this.value4.TabIndex = 12;
+            this.value4.Text = "metroLabel4";
+            // 
+            // value3
+            // 
+            this.value3.AutoSize = true;
+            this.value3.FontSize = MetroFramework.MetroLabelSize.Small;
+            this.value3.Location = new System.Drawing.Point(274, 105);
+            this.value3.Name = "value3";
+            this.value3.Size = new System.Drawing.Size(70, 15);
+            this.value3.TabIndex = 11;
+            this.value3.Text = "metroLabel3";
+            // 
+            // value2
+            // 
+            this.value2.AutoSize = true;
+            this.value2.FontSize = MetroFramework.MetroLabelSize.Small;
+            this.value2.Location = new System.Drawing.Point(274, 74);
+            this.value2.Name = "value2";
+            this.value2.Size = new System.Drawing.Size(70, 15);
+            this.value2.TabIndex = 10;
+            this.value2.Text = "metroLabel2";
+            // 
+            // value1
+            // 
+            this.value1.AutoSize = true;
+            this.value1.FontSize = MetroFramework.MetroLabelSize.Small;
+            this.value1.Location = new System.Drawing.Point(275, 43);
+            this.value1.Name = "value1";
+            this.value1.Size = new System.Drawing.Size(68, 15);
+            this.value1.TabIndex = 9;
+            this.value1.Text = "metroLabel1";
+            // 
+            // cpu5
+            // 
+            this.cpu5.FontSize = MetroFramework.MetroLabelSize.Small;
+            this.cpu5.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.cpu5.Location = new System.Drawing.Point(10, 163);
+            this.cpu5.Name = "cpu5";
+            this.cpu5.Size = new System.Drawing.Size(151, 33);
+            this.cpu5.TabIndex = 7;
+            this.cpu5.Text = "Ядра: ";
+            // 
+            // cpu3
+            // 
+            this.cpu3.FontSize = MetroFramework.MetroLabelSize.Small;
+            this.cpu3.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.cpu3.Location = new System.Drawing.Point(10, 112);
+            this.cpu3.Name = "cpu3";
+            this.cpu3.Size = new System.Drawing.Size(136, 27);
+            this.cpu3.TabIndex = 5;
+            this.cpu3.Text = "Подпись:";
+            this.cpu3.Click += new System.EventHandler(this.cpu3_Click);
+            // 
+            // cpu4
+            // 
+            this.cpu4.FontSize = MetroFramework.MetroLabelSize.Small;
+            this.cpu4.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.cpu4.Location = new System.Drawing.Point(10, 141);
+            this.cpu4.Name = "cpu4";
+            this.cpu4.Size = new System.Drawing.Size(178, 20);
+            this.cpu4.TabIndex = 6;
+            this.cpu4.Text = "Базовая частота: ";
+            // 
+            // cpu6
+            // 
+            this.cpu6.FontSize = MetroFramework.MetroLabelSize.Small;
+            this.cpu6.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.cpu6.Location = new System.Drawing.Point(10, 198);
+            this.cpu6.Name = "cpu6";
+            this.cpu6.Size = new System.Drawing.Size(169, 33);
+            this.cpu6.TabIndex = 8;
+            this.cpu6.Text = "Потоки: ";
+            // 
+            // cpu2
+            // 
+            this.cpu2.FontSize = MetroFramework.MetroLabelSize.Small;
+            this.cpu2.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.cpu2.Location = new System.Drawing.Point(10, 79);
+            this.cpu2.Name = "cpu2";
+            this.cpu2.Size = new System.Drawing.Size(136, 31);
+            this.cpu2.TabIndex = 4;
+            this.cpu2.Text = "Архитектура:";
+            this.cpu2.Click += new System.EventHandler(this.cpu2_Click);
+            // 
+            // CPULabel
+            // 
+            this.CPULabel.FontSize = MetroFramework.MetroLabelSize.Small;
+            this.CPULabel.Location = new System.Drawing.Point(119, 2);
+            this.CPULabel.Name = "CPULabel";
+            this.CPULabel.Size = new System.Drawing.Size(339, 43);
+            this.CPULabel.TabIndex = 1;
+            this.CPULabel.Text = "Характеристики CPU";
+            this.CPULabel.Click += new System.EventHandler(this.metroLabel1_Click);
+            // 
+            // cpu1
+            // 
+            this.cpu1.FontSize = MetroFramework.MetroLabelSize.Small;
+            this.cpu1.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.cpu1.ForeColor = System.Drawing.Color.Black;
+            this.cpu1.Location = new System.Drawing.Point(10, 45);
+            this.cpu1.Name = "cpu1";
+            this.cpu1.Size = new System.Drawing.Size(189, 32);
+            this.cpu1.TabIndex = 3;
+            this.cpu1.Text = "Имя CPU: ";
+            // 
+            // HDDusage
+            // 
+            this.HDDusage.Location = new System.Drawing.Point(4, 29);
+            this.HDDusage.Name = "HDDusage";
+            this.HDDusage.Padding = new System.Windows.Forms.Padding(3);
+            this.HDDusage.Size = new System.Drawing.Size(915, 559);
+            this.HDDusage.TabIndex = 1;
+            this.HDDusage.Text = "Мониторинг HDD";
+            this.HDDusage.UseVisualStyleBackColor = true;
+            // 
+            // UIStyle
+            // 
+            this.UIStyle.Owner = this;
+            this.UIStyle.Style = MetroFramework.MetroColorStyle.Orange;
             // 
             // MainWindow
             // 
@@ -362,9 +363,9 @@ namespace OS_CursProject
             this.tabControl1.ResumeLayout(false);
             this.CPUusage.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chartCPU)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.UIStyle)).EndInit();
             this.metroPanel2.ResumeLayout(false);
             this.metroPanel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.UIStyle)).EndInit();
             this.ResumeLayout(false);
 
         }

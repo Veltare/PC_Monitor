@@ -21,15 +21,20 @@ namespace OS_CursProject
         {
             InitializeComponent();
             InitializeTimer();
+            
             ProcessorInfo Test3 = new ProcessorInfo();
 
             Test3.GetInfo();
             value1.Text = Test3.procName[0];
             value2.Text = "x86";
             value3.Text = Test3.procCaption[0];
-            value4.Text = Test3.procMaxClockSpeed[0] + " ГГц";
+            value4.Text = Test3.procCurrentClockSpeed[0] + " ГГц";
             value5.Text = Test3.procNumberOfCores[0];
             value6.Text = Test3.procThreadCount[0];
+            //Тут что-то с тредами....
+           
+            //Thread timerThread = new Thread(InitializeTimer);
+            //timerThread.Start();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -49,10 +54,12 @@ namespace OS_CursProject
         private void timer_Tick(object sender, EventArgs e)
         {
             ProcessorInfo Test2 = new ProcessorInfo();
-
+            Test2.GetCpuClockSpeed();
             Test2.GetProcTime();
-            if (chartCPU.Series["CPU Usage"].Points.Count == 100)
+            if (chartCPU.Series["CPU Usage"].Points.Count == 60)
                 chartCPU.Series["CPU Usage"].Points.Clear();
+            if (Test2.procLoadPercentage.Count == 0)
+                return;
             chartCPU.Series["CPU Usage"].Points.AddY(Int32.Parse(Test2.procLoadPercentage[0]));
             //CPU_UsageProgressBar.Value = Int32.Parse(Test2.procLoadPercentage[0]);
         }
